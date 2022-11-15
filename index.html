@@ -1,23 +1,35 @@
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  
+    <!-- Primary Meta Tags -->
+    <title></title>
+
+    <!--Open Graph Metadata-->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="NewsDesk-24" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+  </head>
 <body>
 
-<script type="text/javascript">
-  var endpoint = window.location.search.substring(1);
-  var domain = 'https://lokmantra.com/'
-  var test = 'after-quitting-job-started-cultivation-of-medicinal-plants-and-make'
-  
+<script>
   var urlParams = new URLSearchParams(window.location.search);
-  console.log("url " + urlParams.get('u'));
-  console.log("title " + urlParams.get('t'));
-  console.log("image " + urlParams.get('i'));
-  
-//   console.log(window.location.search.substring(1));
-//   function red() {
 
-//       window.location = domain + endpoint
-//   }
-//   setTimeout(red,1)
+  document.querySelectorAll('meta[property=og\\:title]')[0].setAttribute('content', `${urlParams.get('t')}`);
+  document.querySelectorAll('meta[property=og\\:image]')[0].setAttribute('content', `https://newsdesk-24.com/wp-content/uploads/2022/10/${urlParams.get('i')}.jpg`);
+  document.querySelectorAll('meta[property=og\\:url]')[0].setAttribute('content', `https://newsdesk-24.com/${urlParams.get('u')}`);
+  document.title = urlParams.get('t');
+  var domain = 'https://newsdesk-24.com/';
+
+  // var test = 'after-quitting-job-started-cultivation-of-medicinal-plants-and-make'
+
+  // function red() {
+  //     window.location = domain + endpoint
+  // }
+  // setTimeout(red,1);
 </script>
 
 </body>
-</html>
+</html> 
