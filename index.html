@@ -14,6 +14,11 @@
 <body>
 
 <script>
+  var link = document.createElement('meta');
+  link.setAttribute('property', 'og:url');
+  link.content = "pk";
+  document.getElementsByTagName('head')[0].appendChild(link);
+  
   var urlParams = new URLSearchParams(window.location.search);
 
   document.querySelectorAll('meta[property=og\\:title]')[0].setAttribute('content', `${urlParams.get('t')}`);
@@ -22,10 +27,7 @@
   document.title = urlParams.get('t');
   var domain = 'https://newsdesk-24.com/';
   
-  var link = document.createElement('meta');
-  link.setAttribute('property', 'og:url');
-  link.content = urlParams.get('u');
-  document.getElementsByTagName('head')[0].appendChild(link);
+
 
 
   // var test = 'after-quitting-job-started-cultivation-of-medicinal-plants-and-make'
