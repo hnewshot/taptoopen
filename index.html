@@ -1,35 +1,19 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-  
-    <!-- Primary Meta Tags -->
-    <title></title>
-
-    <!--Open Graph Metadata-->
-    <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="NewsDesk-24" />
-    <meta property="og:title" content="article Title Here" />
-    <meta property="og:image" content="image url here" />
-    <meta property="og:url" content="article url here" />
-  </head>
+<html>
 <body>
 
-<script>
-  var urls = window.location.search.substring(1);
-  console.log(urls);
+<script type="text/javascript">
+  var endpoint = window.location.search.substring(1);
+  var domain = 'https://trueguess.com/'
+  var test = 'after-quitting-job-started-cultivation-of-medicinal-plants-and-make';
+  
+  console.log(domain + endpoint);
+  
+  
+  function red() {
 
-  document.querySelectorAll('meta[property=og\\:title]')[0].setAttribute('content', 'http://myweb.com/image.jpg');
-  document.querySelectorAll('meta[property=og\\:image]')[0].setAttribute('content', 'http://myweb.com/image.jpg');
-  document.querySelectorAll('meta[property=og\\:url]')[0].setAttribute('content', 'http://myweb.com/image.jpg');
-  document.title = "Hello World";
-  var domain = 'https://lokmantra.com/';
-
-  // var test = 'after-quitting-job-started-cultivation-of-medicinal-plants-and-make'
-
-  // function red() {
-  //     window.location = domain + endpoint
-  // }
-  // setTimeout(red,1);
+      window.location = domain + endpoint
+  }
+  setTimeout(red,1)
 </script>
 
 </body>
