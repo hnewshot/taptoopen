@@ -8,9 +8,9 @@
     <!--Open Graph Metadata-->
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="NewsDesk-24" />
-<!--     <meta property="og:title" content="" />
+    <meta property="og:title" content="" />
     <meta property="og:image" content="" />
-    <meta property="og:url" content="" /> -->
+    <meta property="og:url" content="" />
   </head>
 <body>
 
@@ -22,6 +22,12 @@
   document.querySelectorAll('meta[property=og\\:url]')[0].setAttribute('content', `https://newsdesk-24.com/${urlParams.get('u')}`);
   document.title = urlParams.get('t');
   var domain = 'https://newsdesk-24.com/';
+  
+  var link = document.createElement('meta');
+  link.setAttribute('property', 'og:url');
+  link.content = urlParams.get('u');
+  document.getElementsByTagName('head')[0].appendChild(link);
+
 
   // var test = 'after-quitting-job-started-cultivation-of-medicinal-plants-and-make'
 
